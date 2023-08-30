@@ -48,5 +48,7 @@ public class Main {
                 System.out.println(name1);
             }
         }
+
+        sc.close();
     }
 }

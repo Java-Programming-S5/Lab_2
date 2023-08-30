@@ -29,5 +29,7 @@ class Main {
             total+= fees;
         }
         System.out.println("Total : "+ total);
+
+        sc.close();
     }
 }
