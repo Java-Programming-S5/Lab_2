@@ -4,51 +4,30 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        System.out.println("Bank Charges");
 
         Scanner sc = new Scanner(System.in);
-        String name1, name2, name3;
+        System.out.println("Number of Checks : ");
+        double checksNumber = sc.nextDouble();
+        double fees;
+        double total = 10.0;
 
-        System.out.println("Enter name 1 :");
-        name1 = sc.nextLine();
-
-        System.out.println("Enter name 2 :");
-        name2 = sc.nextLine();
-
-        System.out.println("Enter name 3 :");
-        name3 = sc.nextLine();
-
-        if (name1.compareToIgnoreCase(name2) <= 0 && name1.compareToIgnoreCase(name3) <= 0) {
-            System.out.println(name1);
-
-            if (name2.compareToIgnoreCase(name3) <= 0) {
-                System.out.println(name2);
-                System.out.println(name3);
-            } else {
-                System.out.println(name3);
-                System.out.println(name2);
-            }
-        } else if (name2.compareToIgnoreCase(name1) <= 0 && name2.compareToIgnoreCase(name3) <= 0) {
-            System.out.println(name2);
-
-            if (name1.compareToIgnoreCase(name3) <= 0) {
-                System.out.println(name1);
-                System.out.println(name3);
-            } else {
-                System.out.println(name3);
-                System.out.println(name1);
-            }
-        } else {
-            System.out.println(name3);
-
-            if (name1.compareToIgnoreCase(name2) <= 0) {
-                System.out.println(name1);
-                System.out.println(name2);
-            } else {
-                System.out.println(name2);
-                System.out.println(name1);
-            }
+        if(checksNumber < 20){  
+            fees = 0.1* checksNumber;
+            total+= fees;
+            
+        } else if( checksNumber >= 20 && checksNumber <= 39){
+            fees = 0.08* checksNumber;
+            total+= fees;
         }
-
+        else if( checksNumber >= 40 && checksNumber <= 59){
+            fees = 0.06* checksNumber;
+            total+= fees;
+        }
+        else{
+            fees = 0.04* checksNumber;
+            total+= fees;
+        }
+        System.out.println("Total : "+ total);
     }
 }
