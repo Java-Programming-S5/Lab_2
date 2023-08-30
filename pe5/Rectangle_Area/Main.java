@@ -1,6 +1,4 @@
 package pe5.Rectangle_Area;
-
-import javax.swing.JOptionPane;
 import java.util.Scanner;
 
 /**
@@ -38,6 +36,7 @@ public class Main
     Scanner sc = new Scanner(System.in);
     System.out.println("Length");
     double l = sc.nextDouble();
+    sc.close();
     return l;
  }
 
@@ -50,6 +49,7 @@ public class Main
     Scanner sc = new Scanner(System.in);
     System.out.println("Width");
     double w = sc.nextDouble();
+    sc.close();
     return w;
  }
 
