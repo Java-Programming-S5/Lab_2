@@ -31,4 +31,11 @@ public class LandTract {
             return (length == l2.length && width == l2.width);
         }
     }
+
+    @Override
+    public String toString(){
+        return "Landtrack : \nLength : "+ length + "\nWidth " + width + "\nArea " + getArea(length, width);
+    }
+
+    
 }
